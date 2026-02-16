@@ -1,0 +1,241 @@
+/* SECCIONES GENERALES*/
+
+* { /* reset*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Importante para que no enloquezca el espacio de cada cajita */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Tipo de letra */
+}
+
+/*estilos generales BODY*/
+body {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;    
+  }
+
+/*estilos generales HEADER*/
+header{
+  background-color: black; /*color de fondo */
+  width: 100%; /*ancho total */
+  display: grid;
+}
+
+header nav ul {
+  display: flex; /* para que quede horizontal */
+  list-style: none;/* Quitar bullet points */
+  gap: 30px;  /* ESPACIO entre Home / About / Works */
+  position: absolute; /* Para poner sobre la imagen */ 
+  top: 30px;   /* Distancia desde arriba */
+  right: 30px;  /* Lo mueve a la derecha */
+}
+.menu a { /* especificar que es la clase menu */
+  text-decoration: none;  /* Sin subrayado */
+}
+
+/* estilos para imagenes banner */
+.banner-img {     
+  width: 100%; /*ancho de la imagen*/
+}
+
+
+/* estilos generales FOOTER */
+footer{
+    font-size: 12px; 
+    padding: 50px; 
+    background-color: #eaeaea; /* Color de fondo*/
+    font-size: 14px; /* Tamaño de la letra*/
+}
+
+.footer-left, 
+.footer-center,
+.footer-right { /* columnas footer*/
+  display: flex; /* De manera horizontal*/
+  flex-direction: column; /* Para que queden columnas*/
+  gap: 10px; /* Espacio entre ellos*/
+}
+
+.logo { /* logo o figura footer*/
+  border: 1px solid black; /* Linea continua*/
+  width: 32px; /* Espacio de contenedor*/
+  height: 32px; /* Espacio de contendor*/
+  font-weight: bold; /* Negrita en letra */
+  display: flex;  /*distribuye class del section*/
+  align-items: center; /* Para que quede centrado alineacion*/
+  justify-content: center; /* Para que quede centrado */
+}
+
+
+.social { /* redes footer */
+  list-style: none;  /*Sin bullet points*/
+  display: flex; /*Ubicados de manera horizontal*/
+  gap: 20px; /* Espacio entre ellos horizontal*/
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  color: black; /* Color de la letra*/
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer-right ul { /* navegación derecha pie de pagina */
+  list-style: none; /*Sin bullet points*/
+  color: black; /* Color de la letra*/
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right li {/* navegación derecha pie de pagina */
+  margin-bottom: 20px;  /* Espacio ENTRE cada item */
+}
+
+
+/* SECCION HOME */
+.logos {
+  padding: 60px 40px;
+}
+
+.logos-list { /* Logos home */
+  list-style: none; /* Quitar bullet points */
+  display: flex; /* para que quede horizontal */
+  justify-content: center; /* centrados */
+  gap: 40px; /* ESPACIO entre cada uno*/
+  align-items: center;
+}
+
+.logos-list img { /* Logos home */
+  max-height: 60px; /* todos parecidos */
+  max-width:auto ;
+}
+
+
+
+
+
+/* SECCION ABOUT */
+
+.two-columns { /* Contenedor principal que crea las dos columnas */
+  display: flex; /* para que quede horizontal */
+  flex-direction: column; /* baje una columna */
+  width: 100%; /* Ancho total */
+}
+
+.foto1 {
+  max-width: 50%; /* Máximo ancho de la imagen para que quede a mitad 50% */
+  min-width: 100%; /* minimo ancho de la imagen para que quede a mitad 100% */
+}
+
+.text-about { /* Columna de texto */
+  display: flex;
+  flex-direction: column; /* Organiza el contenido verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente dentro de la columna */
+  gap: 30px;  /* espacio entre h2 y p */
+  padding: 40px; /* Agrega espacio interno para que el texto no quede pegado */
+}
+
+
+
+
+
+/* SECCION WORKS */
+
+/* ESTILOS MOBILE */
+/*estilos pagina main*/
+.page-works {
+  height: 80vh; /*viewportheight lo que ocupa a lo alto*/
+  align-content: center; /*imagenes centradas en su altura*/
+  display: grid; /*convierte en contenedor grilla*/
+  grid-template-columns: 1fr ;/*numero de columnas*/
+  grid-template-rows: repeat(4,25%);/*numero de filas*/
+}
+.page-works div img{
+  width: 100%; /*ancho completo*/
+  height: 100%; /*alto completo*/
+  object-fit: cover; /*establecer tamaño de imagenes para que queden iguales*/
+}
+.page-works .img-dos{  /*ocultar una imagen en mobile*/
+  display: none;
+}
+footer {
+  grid-template-columns: 1fr;/*numero de columnas*/
+}
+.footer-center{
+  padding-top: 20px ;
+}
+
+
+
+/*estilos para tablet*/
+@media screen and (min-width: 480px) {
+ 
+  .banner-img {     
+  width: 100%; /*ancho de la imagen*/
+  }
+  .page-works {
+    grid-template-columns: repeat(2, 1fr); /*dos columnas*/
+    grid-template-rows: repeat(3, 33.33%);/*tres filas*/
+  }
+  .page-works .img-cuatro, 
+  .page-works .img-cinco{
+    grid-column: span 2;/*para que se repita dos columnas*/
+  }
+  footer{
+    grid-template-columns: repeat(3, 1fr); /*tres columnas*/
+    display: grid; /*convierte en contenedor grilla*/
+  }
+  .footer-center{
+  padding-top: 0;
+}
+ .footer-right {
+    align-items: flex-end; /*alinear a la derecha*/
+  }
+.footer-right ul { 
+  justify-content: flex-end;
+}
+}
+
+
+
+/*estilos para desktop*/
+@media screen and (min-width: 1024px) {
+  .navbar {
+    position: static;/*menu estatico*/
+    padding:0; 
+  }
+  .navbar .nav-link {
+  color: black  !important; /*color texto nav*/
+  }
+  .banner-img {     
+  width: 100%; /*ancho de la imagen*/
+  }
+  .page-works {
+    grid-template-columns: repeat(4, 1fr); /*cuatro columnas*/
+    grid-template-rows: repeat(2, 50%);/*dos filas*/
+  }
+  .page-works .img-uno {
+   grid-row: span 2; /*ocupa dos espacios verticalmente*/
+  }
+  .page-works .img-tres{
+   grid-column: span 2;/*ocupa dos espacios horizontalmente*/
+ }
+  .page-works .img-cinco {
+    grid-column: span 1; /*ocupa un espacio horizontalmente*/
+  }
+  .page-works .img-dos, 
+  .page-works .img-cuatro{
+    display: block; /*Se posicionan donde deben*/
+  }
+  footer{
+    grid-template-columns: repeat(3, 1fr); /*tres columnas*/
+    display: grid; /*convierte en contenedor grilla*/
+  }
+ .footer-right {
+    align-items: flex-end; /*alinear a la derecha*/
+  }
+  }
+
+
+
+
+  
