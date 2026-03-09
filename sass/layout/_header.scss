@@ -1,0 +1,38 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins 
+@use "../utilities/mixin" as *; 
+
+/*estilos header*/
+
+header{
+  background-color:$secundary-color;
+  width:100%;
+  display:grid;
+  nav{
+    ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+      position:absolute;
+      top:30px;
+      right:30px;
+    }
+  }
+
+  //Otra manera de animar// 
+  .nav-link{
+  text-decoration:none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  }
+  .nav-link:hover{
+    color:red !important;
+    font-weight:bold;
+    transform:translateY(-2px);
+  }
+}
+
+
+.banner-img{
+  width:100%;
+}

@@ -1,0 +1,22 @@
+//variables
+@use "../utilities/variables" as *;
+
+/* reset*/
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+ 
+/* estilos generales body */
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  color:$primary-color;
+  text-decoration:none;
+}

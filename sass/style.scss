@@ -1,0 +1,18 @@
+//reset
+@use "base/reset" as *;
+//mixins 
+@use "utilities/mixin" as *;
+//home
+@use "pages/home";
+//works
+@use "pages/works";
+//about
+@use "pages/about";
+//header
+@use "layout/header";
+//footer
+@use "layout/footer";
+//mq-tablet
+@use "layout/mq-tablet";
+//mq-desktop 
+@use "layout/mq-desktop";

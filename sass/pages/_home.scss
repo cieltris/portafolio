@@ -1,0 +1,22 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins 
+@use "../utilities/mixin" as *; 
+
+
+/* estilos HOME */
+.logos {
+  padding: 60px 40px;
+}
+
+.logos-list { // Logos home //
+  list-style: none; // Quitar bullet points //
+  display: flex; // para que quede horizontal //
+  justify-content: center; // centrados //
+  gap: 40px; // ESPACIO entre cada uno//
+  align-items: center;
+  img { // Logos home //
+    max-height: 60px; // todos parecidos //
+    max-width:auto ;
+    }
+}

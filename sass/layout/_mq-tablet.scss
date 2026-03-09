@@ -1,0 +1,49 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins 
+@use "../utilities/mixin" as *; 
+
+/*estilos para tablet*/
+
+@media screen and (min-width:480px){
+
+.page-works{
+  @include grilla(repeat(2,1fr), repeat(3,33.33%));
+  .img-cuatro,
+  .img-cinco{
+    grid-column:span 2;
+  }
+}
+
+.page-about {
+  .two-columns{
+    @include grilla(repeat(2,1fr), auto);
+  }
+  .foto1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+}
+
+footer{
+  @include grilla(repeat(3,1fr),auto);
+}
+
+.footer-center{
+  padding-top:0;
+}
+
+.footer-right{
+  align-items:flex-end;
+  ul{
+    justify-content:flex-end;
+  }
+
+}
+
+}
+
+

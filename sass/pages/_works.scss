@@ -1,0 +1,29 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins 
+@use "../utilities/mixin" as *; 
+
+
+/* ESTILOS MOBILE */
+/*estilos pagina WORKS*/
+.page-works {
+  height: 80vh; //viewportheight lo que ocupa a lo alto//
+  align-content: center; //imagenes centradas en su altura//
+  display: grid; //convierte en contenedor grilla//
+  @include grilla(1fr, repeat(4,25%));
+  div {
+  img{
+    width: 100%; //ancho completo//
+    height: 100%; //alto completo//
+    object-fit: cover; //establecer tamaño de imagenes para que queden iguales//
+  }
+  }
+  .img-dos{ //ocultar una imagen en mobile//
+  display: none;
+}
+}
+
+.footer-center{
+  padding-top: 20px ;
+} 
+

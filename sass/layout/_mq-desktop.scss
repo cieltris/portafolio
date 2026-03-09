@@ -1,0 +1,60 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins 
+@use "../utilities/mixin" as *; 
+
+/*estilos para desktop*/
+
+@media screen and (min-width:1024px){
+
+.navbar{
+  position:static;
+  padding:0;
+  .nav-link{
+    color:$primary-color !important;
+  }
+}
+
+.page-works{
+  @include grilla(repeat(4,1fr),repeat(2,50%));  
+  .img-uno{
+    grid-row:span 2;
+  }
+  .img-tres{
+    grid-column:span 2;
+  }
+  .img-cinco{
+    grid-column:span 1;
+  }
+  .img-dos,
+  .img-cuatro{
+    display:block;
+  }
+}
+
+.page-about {
+  .two-columns{
+    @include grilla(repeat(2,1fr), auto);
+    align-items: center;
+    text-align: justify;
+  }
+
+  .foto1{
+    width:80%;
+    max-height:400px;
+    object-fit:cover;
+    justify-self:center;
+    object-position: bottom;
+  }
+}
+
+
+footer{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+
+.footer-right{
+  align-items:flex-end;
+}
+}
