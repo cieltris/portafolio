@@ -54,6 +54,14 @@ a {
   display: none;
 }
 
+.img-hover {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-out;
+}
+.img-hover:hover {
+  filter: grayscale(0%);
+}
+
 .footer-center {
   padding-top: 20px;
 }

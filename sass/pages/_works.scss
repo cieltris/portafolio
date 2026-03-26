@@ -23,6 +23,14 @@
 }
 }
 
+.img-hover { //efecto hover imagen//
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-out;
+  &:hover{
+    filter: grayscale(0%);
+  }
+}
+
 .footer-center{
   padding-top: 20px ;
 } 
